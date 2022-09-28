@@ -49,7 +49,7 @@ const RequestReserve = (props) => {
 		} catch (e) {
 			console.log(e);
 		}
-		console.log(numberOfCampers);
+		// console.log(numberOfCampers);
 	};
 	return (
 		<div>

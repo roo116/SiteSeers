@@ -18,12 +18,12 @@ function SearchResults(props) {
   const [queryCampsite, { error }] = useLazyQuery(QUERY_CAMPSITE);
 
   useEffect(() => {
-    console.log(searchState);
+    // console.log(searchState);
     if (searchState === "") {
       return;
     }
     const fetchData = async () => {
-      console.log("SEARCHSTATE", searchState);
+      // console.log("SEARCHSTATE", searchState);
       try {
         const { data } = await queryCampsite({
           variables: { city: searchState },
@@ -37,7 +37,7 @@ function SearchResults(props) {
   }, [searchState]);
 
   const campsiteArray = getData.campsites;
-  console.log(campsiteArray);
+  // console.log(campsiteArray);
   // if (!resultsArray.length) {
   //   return <p>Nothing here</p>;
   // }
